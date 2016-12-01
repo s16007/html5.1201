@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML（13-2_1）背景に画像を入れてみよう[1]GIFを使って</title>
+<meta name="description" content="はじめてのHTML。サイトの背景に画像を入れてみよう">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/1_gif_1piece.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header><h1>背景に画像を入れる [1]<span>-1 リピートなし</span></h1>
+背景画像を右上に配置。<br>
+background: #EDE8EA url(../img/tile_1p_g.gif) no-repeat <strong>right</strong> top;</header>
+<div id="container">
+<p>
+＜body＞に、GIFファイルを1枚だけ貼っています。
+</p>
+<p>
+「no-repeat (半角スペース) <strong>right</strong> (半角スペース) top;」<br>
+と指定する事によって、<br>
+「リピートせず」<strong>「X軸は右に」</strong>「Y軸は上に」画像を配置します。
+</p>
+<p>
+背景の画像はこれ（tile_1p_g.gif）<br>
+<a href="img/tile_1p_g.gif" target="_blank"><img src="img/tile_1p_g.gif" alt="このページの背景画像" width="80" height="100" border="0"><br>
+<span>クリックすると実サイズで画像が開きます(別ウィンドウ)</span></a>
+</p>
+
+
+
+<pre><span class="green">[↓ このページのHTMLソース ↓]</span>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+〜略〜
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/1_gif_1piece.css&quot;
+ media=&quot;screen, tv, projection&quot;&gt;
+〜略〜
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;&lt;h1&gt;このページのタイトル&lt;/h1&gt;/header&gt;
+&lt;div id=&quot;container&quot;&gt;
+(ここに本文テキスト)
+&lt;/div&gt;
+&lt;footer&gt;Copyright © グラフィックデザイナーのためのHTMLメモ All Rights Reserved.&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+
+<pre><span class="green">[↓ このページのCSSソース ↓]</span>/
+* 1_gif_1piece.css */
+/* default */
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#666;
+	font-family: &quot;メイリオ&quot;, Meiryo, &quot;Hiragino Kaku Gothic Pro&quot;, &quot;ヒラギノ角ゴ Pro W3&quot;, 
+	&quot;ＭＳ Ｐゴシック&quot;, &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Verdana, sans-serif;
+	line-height: 18px;
+	<span style="font-size:100%;" class="red">background: #EDE8EA url(../img/tile_1p_g.gif) no-repeat right top;</span>
+}
+header {
+	width: 660px;
+	margin: 0px auto;
+	padding: 30px 0px;
+	color: #000;
+}
+h1 {
+	line-height: 1em;
+	font-size: 200%;
+}
+#container {
+	width: 600px;
+	margin: 0px auto;
+	padding: 30px;
+	background: #FFF;
+	border: 1px solid #E0DADD;
+}
+〜このあと省略〜</pre>
+<span><a href="css/1_gif_1piece.css">このページのCSSソースを全部見る</a></span>
+
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML</a> All Rights Reserved.
+</footer>
+</body>
+</html>

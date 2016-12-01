@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML（13-3）背景にCSS3でグラデーション [1]-縦方向</title>
+<meta name="description" content="はじめてのHTML。サイトの背景に画像を入れてみよう">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/1y.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header><h1>背景にCSS3でグラデーション [1]<span>-縦方向</span></h1>
+
+</header>
+<div id="container">
+<p>
+＜body＞のbackgroundに、CSS3で縦方向に線形グラデーションを指定します。
+</p>
+<p>
+グラデの位置指定は省略でOK（デフォルトが上から下なので）<br>
+<span>（→to bottom　180deg と指定しても同じです）</span>
+</p>
+
+
+<p>
+このページの使用色は、<br>
+開始色：#FF9<br>
+終了色：#9C0
+</p>
+
+
+
+
+<pre><span class="green">[ このページのHTMLソースは、<a href="../sample13-2set/honttoni13-2_1.html">13-1 [1]-1（背景画像を右上に配置）</a>と同じです。 ]</span></pre>
+
+
+<pre><span class="green">[↓ このページのCSSソース ↓]</span>/
+/* 1y.css */
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#666;
+	font-family:Century Gothic, Arial, sans-serif;
+	line-height: 18px;<span style="font-size:100%;" class="red">
+/*背景の指定*/
+	background:#9c0;<br>	/*↓webkit系ベンダープレフィックス（参考のため一応残しています）*/<br>	background: -webkit-linear-gradient(top, #ff9, #9c0); <br>	/*↓標準型（方向は省略＿デフォルトの to bottom になる）*/<br>	background: linear-gradient(#FF9, #9C0);</span>
+}
+header {
+	width: 660px;
+	margin: 0px auto;
+	padding: 30px;
+	color: #000;
+}
+h1 {
+	line-height: 1em;
+	font-size: 200%;
+}
+#container {
+	width: 600px;
+	margin: 0px auto;
+	padding: 30px;
+	background: #FFF;
+	border: 1px solid #9c0;
+}
+
+以下省略</pre>
+<span><a href="css/1y.css">このページのCSSソースを全部見る</a></span>
+
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML5</a> All Rights Reserved.
+</footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML（13-1-2）背景に色をつけてみよう_[2]</title>
+<meta name="description" content="はじめてのHTML。サイトの背景にCSSで色をつけてみましょう">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/default.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="container">
+(ここに本文)
+</div>
+<p>
+＜div＞#containerの背景色を白にしましょう。
+</p>
+<p>
+CSSのソースに下記の赤字の部分を追加します。
+</p>
+
+<pre><span class="green">[↓ CSS ↓]</span>
+/* honttoni13-1-2_default.css */
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#666;
+	font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 
+	"ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	line-height: 18px;
+	background: #9F737C;
+}
+#container {
+	width: 600px;
+	margin: 0px auto;
+	padding: 30px;
+	<span class="red">background: #FFF;</span>
+}
+header, article, footer, aside, time ,nav { display: block; }
+pre {
+	font-size: 82%;
+	color: #93BAF5;
+	margin-bottom: 2em;
+	width: 400px;
+}
+/* color */
+.red{
+	color: #F99;
+}
+.green{
+	color: #6C9;
+}
+
+</pre>
+
+</div>
+</body>
+</html>

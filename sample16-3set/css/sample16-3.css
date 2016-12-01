@@ -1,0 +1,131 @@
+/* default */
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#666;
+	font:90%/1.6 "Lucida Sans Unicode", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+	background: #CCDBFA;
+}
+header {
+	width: 700px;
+	margin: 0px auto;
+	padding: 30px 0px;
+	color: #5B69AF;
+}
+#container {
+	width: 640px;
+	margin: 0px auto;
+	padding: 30px;
+	background: #FFF;
+	border: 1px solid #E0DADD;
+}
+header, article, footer, aside, time ,nav { display: block; }
+p {
+	margin-top: 30px;
+	margin-bottom: 0.5em;
+}
+h1 {
+	line-height: 1em;
+	font-size: 200%;
+}
+h2 {
+	line-height: 1em;
+	font-size: 120%;
+}
+pre {
+	color: #70A2E3;
+	margin-bottom: 2em;
+	width: 620px;
+	background:#E3EFFB;
+	padding: 10px;
+}
+footer {
+	width: 700px;
+	margin: 0px auto;
+	color: #FFF;
+	text-align: center;
+	padding: 10px 0px;
+	background: #000;
+	font: bold 80%/1em Arial, Helvetica, sans-serif;
+}
+.c-both {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* color */
+.red{
+	color: #F00;
+}
+.green{
+	color: #6C9;
+}
+
+/* link */
+a {
+	color: #F90;
+	text-decoration: underline;
+}
+a:hover {
+	color: #F66;
+}
+
+/* sample1のCSS */
+table.sample1 {
+	width: 100%;
+	margin:20px 0px 50px;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-spacing:0px;
+}
+table.sample1 tr th,table.sample1 tr td {
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	padding: 3px;
+}
+table.sample1 tr th {
+	background: #E6EAFF;
+}
+table.sample1 caption {
+	font-size: 90%;
+	font-weight: bold;
+	width: 100%;
+	border-bottom: 1px dotted #6F87FF;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #6F87FF;
+}
+
+/* sample2のCSS */
+table.sample2, table.sample2_2 {
+	width: 100%;
+	border: 1px solid #CCC;
+	margin: 20px 0px 50px;
+	padding: 7px;
+	border-spacing:3px;
+}
+table.sample2 tr th, table.sample2_2 tr th {
+	text-align: center;
+	font-size: 14px;
+	padding: 1px;
+	background: #C7EBC9;
+}
+table.sample2 tr td, table.sample2_2 tr td {
+	text-align: center;
+	font-size: 14px;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+table.sample2 tr.youbi td, table.sample2_2 tr.youbi td {
+	font-size: 11px;
+	padding: 1px;
+	background: #FFC;
+	border: none;
+}
+table.sample2 tr td {
+	empty-cells:hide;
+}

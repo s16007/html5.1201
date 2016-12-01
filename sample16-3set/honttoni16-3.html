@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML_Sample 16-3</title>
+<meta name="description" content="ほんっとにはじめてのHTML">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/sample16-3.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+<h1>ほんっとにはじめてのHTML_Sample16-3</h1>
+<h2>セルを連結　＆　空のセルを表示させない方法</h2>
+</header>
+
+<div id="container">
+<p class="green" style="margin-top:0em;">
+●セルを連結させましょう。
+</p>
+
+<table class="sample1">
+<caption>新作アイテム価格表</caption>
+  <tr>
+    <th colspan="2">新作アイテム</th>
+    <th>価格</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Tシャツ</td>
+    <td>半袖</td>
+    <td>￥3,500</td>
+  </tr>
+  <tr>
+    <td>長袖</td>
+    <td>￥5,500</td>
+  </tr>
+  <tr>
+    <td rowspan="3">パンツ</td>
+    <td>5分丈</td>
+    <td>￥15,000</td>
+  </tr>
+  <tr>
+    <td>7分丈</td>
+    <td>￥20,000</td>
+  </tr>
+  <tr>
+    <td>10分丈</td>
+    <td>￥22,000</td>
+  </tr>
+</table>
+
+
+<table class="sample1">
+<caption>連結しないとこうなる（わかりにくい表に）</caption>
+  <tr>
+    <th>新作アイテム</th>
+    <th>仕様</th>
+    <th>価格</th>
+  </tr>
+  <tr>
+    <td>Tシャツ</td>
+    <td>半袖</td>
+    <td>￥3,500</td>
+  </tr>
+  <tr>
+    <td>Tシャツ</td>
+    <td>長袖</td>
+    <td>￥5,500</td>
+  </tr>
+  <tr>
+    <td>パンツ</td>
+    <td>5分丈</td>
+    <td>￥15,000</td>
+  </tr>
+  <tr>
+    <td>パンツ</td>
+    <td>7分丈</td>
+    <td>￥20,000</td>
+  </tr>
+  <tr>
+    <td>パンツ</td>
+    <td>10分丈</td>
+    <td>￥22,000</td>
+  </tr>
+</table>
+
+
+
+<p class="green" style="border-top:solid 1px #6C9; margin-top:50px; padding-top:30px;" id="emptycells">
+●空のセルを表示させないで、すっきりさせてみましょう。
+</p>
+
+<table class="sample2">
+<caption>「empty-cells:hide;」でカラのセルを非表示にした場合</caption>
+  <tr>
+    <th colspan="7">7月</th>
+    </tr>
+  <tr class="youbi">
+    <td>sun</td>
+    <td>mon</td>
+    <td>tue</td>
+    <td>wed</td>
+    <td>thu</td>
+    <td>fri</td>
+    <td>sat</td>
+  </tr>
+  <tr>
+    <td colspan="5" class="hide"></td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+    <td>13</td>
+    <td>14</td>
+    <td>15</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>18</td>
+    <td>19</td>
+    <td>20</td>
+    <td>21</td>
+    <td>22</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>25</td>
+    <td>26</td>
+    <td>27</td>
+    <td>28</td>
+    <td>29</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td colspan="6" class="hide"></td>
+    </tr>
+</table>
+
+<table class="sample2_2">
+<caption>
+そのままの場合はこんなかんじ（すっきりしない）
+</caption>
+  <tr>
+    <th colspan="7">7月</th>
+    </tr>
+  <tr class="youbi">
+    <td>sun</td>
+    <td>mon</td>
+    <td>tue</td>
+    <td>wed</td>
+    <td>thu</td>
+    <td>fri</td>
+    <td>sat</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+    <td>13</td>
+    <td>14</td>
+    <td>15</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>18</td>
+    <td>19</td>
+    <td>20</td>
+    <td>21</td>
+    <td>22</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>25</td>
+    <td>26</td>
+    <td>27</td>
+    <td>28</td>
+    <td>29</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+<p>
+<span><a href="css/sample16-3.css">このページのCSSソースを見る</a></span>
+</p>
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML</a> All Rights Reserved.
+</footer>
+</body>
+</html>

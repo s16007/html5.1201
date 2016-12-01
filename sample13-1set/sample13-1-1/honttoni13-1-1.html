@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML（13-1-1）背景に色をつけてみよう_[1]</title>
+<meta name="description" content="はじめてのHTML。サイトの背景にCSSで色をつけてみましょう">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/default.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="container">
+<p>
+まずは、背景全体に色をつけてみましょう。
+</p>
+<p>
+＜body＞にCSSで色指定をします。<br>
+HTMLとCSSのソースは下記のとおり。
+</p>
+<pre><span class="green">[↓ HTMLソース ↓]</span>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;ほんっとにはじめてのHTML（13-1）背景に色をつけてみよう_[1]&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;はじめてのHTML。サイトの背景にCSS
+で色をつけてみましょう&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;ほんっとにはじめてのHTML,CSS3,html5&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/default.css&quot;
+ media=&quot;screen, tv, projection&quot;&gt;
+&lt;!--[if lt IE 9]&gt;<br>&lt;script src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;container&quot;&gt;
+(ここにテキスト)
+&lt;pre&gt;(ここにソース)&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+
+<pre><span class="green">[↓ CSS ↓]</span>
+/* honttoni13-1-1_default.css */
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#666;
+	font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 
+	"ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	line-height: 18px;
+	background: #9F737C;
+}
+#container {
+	width: 600px;
+	margin: 0px auto;
+	padding: 30px;
+}
+header, article, footer, aside, time ,nav { display: block; }
+pre {
+	font-size: 82%;
+	color: #93BAF5;
+	margin-bottom: 2em;
+	width: 400px;
+}
+/* color */
+.red{
+	color: #F99;
+}
+.green{
+	color: #6C9;
+}
+</pre>
+
+</div>
+</body>
+</html>

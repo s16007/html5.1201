@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML（15-2）（＜ol＞と＜li＞）</title>
+<meta name="description" content="はじめてのHTML。サイトの背景に画像を入れてみよう">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/sample15_2.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header><h1>ほんっとにはじめてのHTML_Sample15-2</span></h1>
+<h2>リストを作ってグルーピングしよう─<strong>「番号ありリスト＜ol＞」</strong></h2>
+</header>
+
+<div id="container">
+<p style="margin-top:0em;">
+＜ol＞は「番号ありリスト」。<br>
+<span class="red">各項目に順番があるときに</span>使います。<br>
+リスト内の各項目は＜ul＞のときと同じで＜li＞要素にします。
+</p>
+
+<p>
+デフォルトだと下のように、リスト記号はアラビア数字(decimal)です。
+</p>
+
+<aside>
+<section>
+<h3>Sample1-デフォルトの番号ありリスト</h3>
+<ol>
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li>干し椎茸はもどして石づきを取り半分に切る</li>
+<li>鶏肉は薄切りにして塩と酒をふりかける</li>
+<li>海老は尾を残して殻をむき背わたを取る</li>
+</ol>
+</section>
+</aside>
+
+<pre><span class="green">[↓リスト部分のHTMLソース ↓]</span>
+&lt;ol&gt;
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+&lt;li&gt;干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;li&gt;鶏肉は薄切りにして塩と酒をふりかける&lt;/li&gt;
+&lt;li&gt;海老は尾を残して殻をむき背わたを取る&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+
+
+<!--開始番号を指定-->
+<p>
+開始番号を指定したりできます。
+</p>
+
+<aside>
+<section>
+<h3>Sample2-開始番号を指定する (start="数字")</h3>
+<ol start="3">
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li>干し椎茸はもどして石づきを取り半分に切る</li>
+<li>鶏肉は薄切りにして塩と酒をふりかける</li>
+<li>海老は尾を残して殻をむき背わたを取る</li>
+</ol>
+</section>
+</aside>
+
+<aside>
+<section>
+<h3>Sample3-途中で番号を変更する (value="数字")</h3>
+<ol start="3">
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li value="1">干し椎茸はもどして石づきを取り半分に切る</li>
+<li>鶏肉は薄切りにして塩と酒をふりかける</li>
+<li>海老は尾を残して殻をむき背わたを取る</li>
+</ol>
+</section>
+</aside>
+
+<pre><span class="green">[↓リスト部分のHTMLソース ↓]</span>
+<span class="red">&lt;ol start=&quot;3&quot;&gt;</span>
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+&lt;li&gt;干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;li&gt;鶏肉は薄切りにして塩と酒をふりかける&lt;/li&gt;
+&lt;li&gt;海老は尾を残して殻をむき背わたを取る&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+<span class="red">&lt;li value=&quot;1&quot;&gt;</span>干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;li&gt;鶏肉は薄切りにして塩と酒をふりかける&lt;/li&gt;
+&lt;li&gt;海老は尾を残して殻をむき背わたを取る&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<aside>
+<section>
+<h3>Sample4-数字が大きい順に表示 (reversed="数字")</h3>
+<ol reversed>
+<li>1行目のテキスト</li>
+<li>2行目のテキスト</li>
+<li>3行目のテキスト</li>
+<li>4行目のテキスト</li>
+<li>5行目のテキスト</li>
+</ol>
+</section>
+</aside>
+
+<pre><span class="green">[↓リスト部分のHTMLソース ↓]</span>
+<span class="red">&lt;ol reversed&gt;</span>
+&lt;li&gt;1行目のテキスト&lt;/li&gt;
+&lt;li&gt;2行目のテキスト&lt;/li&gt;
+&lt;li&gt;3行目のテキスト&lt;/li&gt;
+&lt;li&gt;4行目のテキスト&lt;/li&gt;
+&lt;li&gt;5行目のテキスト&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+
+
+<!--リストスタイル-->
+<p>
+他の数字やアルファベットにするには、CSSで変更します。
+</p>
+
+<aside>
+<section>
+<h3>Sample5-ローマ数字の小文字 (lower-roman)</h3>
+<ol id="sample-lower-roman">
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li>干し椎茸はもどして石づきを取り半分に切る</li>
+</ol>
+</section>
+</aside>
+
+<aside>
+<section>
+<h3>Sample6-ローマ数字の大文字 (upper-roman)</h3>
+<ol id="sample-upper-roman">
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li>干し椎茸はもどして石づきを取り半分に切る</li>
+</ol>
+</section>
+</aside>
+
+<aside>
+<section>
+<h3>Sample7-アルファベットの小文字 (lower-alpha)</h3>
+<ol id="sample-lower-alpha">
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li>干し椎茸はもどして石づきを取り半分に切る</li>
+</ol>
+</section>
+</aside>
+
+<aside>
+<section>
+<h3>Sample8-アルファベットの大文字 (upper-alpha)</h3>
+<ol id="sample-upper-alpha">
+<li>卵をよくときほぐす</li>
+<li>卵にだし汁、薄口醤油とみりんを混ぜる</li>
+<li>干し椎茸はもどして石づきを取り半分に切る</li>
+</ol>
+</section>
+</aside>
+
+
+<pre><span class="green">[↓上記のリスト部分のCSS ↓]</span>
+/* リストの装飾用CSS */
+ol#sample-lower-roman li {
+	list-style: lower-roman;
+}
+ol#sample-upper-roman {
+	list-style: upper-roman;
+}
+ol#sample-lower-alpha {
+	list-style: lower-alpha;
+}
+ol#sample-upper-alpha {
+	list-style: upper-alpha;
+}</pre>
+
+<pre><span class="green">[↓上記のリスト部分のHTMLソース ↓]</span>
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample5-ローマ数字の小文字(lower-roman)&lt;/h3&gt;
+&lt;ol <span class="red">id=&quot;sample-lower-roman&quot;</span>&gt;
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+&lt;li&gt;干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample6-ローマ数字の大文字(upper-roman)&lt;/h3&gt;
+&lt;ol <span class="red">id=&quot;sample-upper-roman&quot;</span>&gt;
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+&lt;li&gt;干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample7-アルファベットの小文字(lower-alpha)&lt;/h3&gt;
+&lt;ol <span class="red">id=&quot;sample-lower-alpha&quot;</span>&gt;
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+&lt;li&gt;干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample8-アルファベットの大文字(upper-alpha)&lt;/h3&gt;
+&lt;ol <span class="red">id=&quot;sample-upper-alpha&quot;</span>&gt;
+&lt;li&gt;卵をよくときほぐす&lt;/li&gt;
+&lt;li&gt;卵にだし汁、薄口醤油とみりんを混ぜる&lt;/li&gt;
+&lt;li&gt;干し椎茸はもどして石づきを取り半分に切る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/aside&gt;</pre>
+
+<span><a href="css/sample15_2.css">このページのCSSソースを見る</a></span>
+
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML</a> All Rights Reserved.
+</footer>
+</body>
+</html>

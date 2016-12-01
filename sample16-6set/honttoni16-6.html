@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML_Sample 16-6</title>
+<meta name="description" content="ほんっとにはじめてのHTML">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/sample16-6.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+<h1>ほんっとにはじめてのHTML_Sample16-6</h1>
+<h2>縦列をグループ化しよう</h2>
+</header>
+
+<div id="container">
+<p class="green" style="margin-top:0em;">
+●&lt;colgroup&gt;で縦列をグループ化して、CSSで色分けしましょう。
+</p>
+
+<p>
+下記の縦列が5列あるtableを、&lt;colgroup&gt;で2列と3列に分けました。<br>
+（前回の&lt;thead&gt;&lt;tfoot&gt;のCSSはそのまま残しています。）</p>
+
+<table class="sample1">
+<caption>来店者数</caption>
+<colgroup id="shop" span="2"></colgroup>
+<colgroup span="3" id="count"></colgroup>
+
+<thead>
+  <tr>
+    <th>エリア</th>
+    <th>店舗名</th>
+    <th>来店総数</th>
+    <th>新規来店</th>
+    <th>リピート</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th rowspan="3">A</td>
+    <td>渋谷店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>神宮前店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>青山店</td>
+    <td>200</td>
+    <td>120</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <th rowspan="2">B</td>
+    <td>三軒茶屋店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>二子玉川店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <th colspan="2">合計</td>
+    <td>700</td>
+    <td>480</td>
+    <td>220</td>
+  </tr>
+</tfoot>
+</table>
+
+<p>
+&lt;colgroup span=&quot;2&quot;&gt;&lt;colgroup span=&quot;3&quot;&gt;というふうに、span属性を使います。<br>
+このようにspan属性を使用した場合は、&lt;col&gt;要素は使用できません。（詳細はブログ本文で）
+</p>
+
+
+
+<p class="green" style="border-top:solid 1px #6C9; margin-top:50px; padding-top:30px;" id="col">
+●&lt;colgroup&gt;の中に&lt;col&gt;を入れて、さらに細かく縦列を分ける事ができます。
+</p>
+<p>
+さきほどの&lt;colgroup&gt;の色分けを、&lt;col&gt;でさらに縦に分けてみました。
+</p>
+
+<table class="sample2">
+<caption>来店者数</caption>
+<colgroup><col id="area"><col id="shop"></colgroup>
+<colgroup><col id="count"><col span="2" id="count2"></colgroup>
+<!--colgroup内にcolを入れる場合は、colgroupにspan属性を使用できない-->
+<thead>
+  <tr>
+    <th>エリア</th>
+    <th>店舗名</th>
+    <th>来店総数</th>
+    <th>新規来店</th>
+    <th>リピート</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th rowspan="3">A</td>
+    <td>渋谷店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>神宮前店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>青山店</td>
+    <td>200</td>
+    <td>120</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <th rowspan="2">B</td>
+    <td>三軒茶屋店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>二子玉川店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <th colspan="2">合計</td>
+    <td>700</td>
+    <td>480</td>
+    <td>220</td>
+  </tr>
+</tfoot>
+</table>
+
+<p>
+&lt;colgroup&gt;&lt;col&gt;&lt;col&gt;&lt;/colgroup&gt;というふうに書きます。<br>
+このように&lt;col&gt;要素を使用する場合は&lt;colgroup&gt;にspan属性は使用できません。
+</p>
+
+
+<p class="green" style="border-top:solid 1px #6C9; margin-top:50px; padding-top:30px;" id="mix">
+●&lt;col&gt;あり&lt;colgroup&gt;と、&lt;col&gt;なし&lt;colgroup&gt;のセットもアリ。
+</p>
+<p>
+上記2つのサンプルの混合でもOKです。<br>
+&lt;colgroup&gt;&lt;col&gt;&lt;col&gt;&lt;/colgroup&gt;<br>
+&lt;colgroup span=&quot;3&quot;&gt;&lt;/colgroup&gt;<br>
+</p>
+
+<table class="sample3" style="margin-bottom:150px;">
+<caption>来店者数</caption>
+<colgroup><col id="area"><col id="shop"></colgroup>
+<colgroup span="3" id="count"></colgroup>
+<!--colgroupにspan属性を使う場合は、colは使用できない-->
+<!--colgroup内にcolを入れる場合は、colgroupにspan属性を使用できない-->
+<thead>
+  <tr>
+    <th>エリア</th>
+    <th>店舗名</th>
+    <th>来店総数</th>
+    <th>新規来店</th>
+    <th>リピート</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th rowspan="3">A</td>
+    <td>渋谷店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>神宮前店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>青山店</td>
+    <td>200</td>
+    <td>120</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <th rowspan="2">B</td>
+    <td>三軒茶屋店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>二子玉川店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <th colspan="2">合計</td>
+    <td>700</td>
+    <td>480</td>
+    <td>220</td>
+  </tr>
+</tfoot>
+</table>
+
+
+
+
+
+<p>
+  <span><a href="css/sample16-6.css">このページのCSSソースを見る</a></span>
+</p>
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML</a> All Rights Reserved.
+</footer>
+</body>
+</html>

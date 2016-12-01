@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML（15-1）リストを作ってグルーピングしよう（＜ul＞と＜li＞）</title>
+<meta name="description" content="はじめてのHTML。サイトの背景に画像を入れてみよう">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/sample15_1.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header><h1>ほんっとにはじめてのHTML_Sample15-1</span></h1>
+<h2>リストを作ってグルーピングしよう─<strong>「番号無しリスト＜ul＞」</strong></h2>
+</header>
+
+<div id="container">
+<p style="margin-top:0em;">
+＜ul＞は「番号無しリスト」。<br>
+<span class="red">一般的な箇条書き</span>で、各項目に<span class="red">順番が無いとき</span>に使います。<br>
+リスト内の各項目は＜li＞要素にします。
+</p>
+
+<p>
+デフォルトだと下のように、リスト記号は●(discって呼びます)です。
+</p>
+
+<aside>
+<section>
+<h3>Sample①-デフォルトの番号無しリスト</h3>
+<ul>
+<li>オレガノ</li>
+<li>カモミール</li>
+<li>クレソン</li>
+<li>セージ</li>
+<li>タイム</li>
+<li>ディル</li>
+<li>バジル</li>
+<li>フェンネル</li>
+<li>レモングラス</li>
+<li>ローズマリー</li>
+</ul>
+</section>
+</aside>
+
+<pre><span class="green">[↓リスト部分のHTMLソース ↓]</span>
+&lt;h3&gt;Sample①-デフォルトの番号無しリスト&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;オレガノ&lt;/li&gt;
+&lt;li&gt;カモミール&lt;/li&gt;
+&lt;li&gt;クレソン&lt;/li&gt;
+&lt;li&gt;セージ&lt;/li&gt;
+&lt;li&gt;タイム&lt;/li&gt;
+&lt;li&gt;ディル&lt;/li&gt;
+&lt;li&gt;バジル&lt;/li&gt;
+&lt;li&gt;フェンネル&lt;/li&gt;
+&lt;li&gt;レモングラス&lt;/li&gt;
+&lt;li&gt;ローズマリー&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+
+<p>
+リスト記号（●などの）は、CSSで変更します。
+</p>
+
+<aside>
+<section>
+<h3>Sample②-リスト記号-まる(circle)</h3>
+<ul id="sample-circle">
+<li>オレガノ</li>
+<li>カモミール </li>
+<li>クレソン</li>
+</ul>
+</section>
+</aside>
+
+<aside>
+<section>
+<h3>Sample③-リスト記号-四角(square)</h3>
+<ul id="sample-square">
+<li>オレガノ</li>
+<li>カモミール </li>
+<li>クレソン</li>
+</ul>
+</section>
+</aside>
+
+<aside>
+<section>
+<h3>Sample④-リスト記号-なし(none)</h3>
+<ul id="sample-none">
+<li>オレガノ</li>
+<li>カモミール </li>
+<li>クレソン</li>
+</ul>
+</section>
+</aside>
+
+<pre><span class="green">[↓上記のリスト部分のCSS ↓]</span>
+/* リストの装飾用CSS */
+ul#sample-circle li {
+	list-style: circle;
+}
+ul#sample-square li {
+	list-style: square;
+}
+ul#sample-none {
+	list-style: none;
+}</pre>
+
+<pre><span class="green">[↓上記のリスト部分のHTMLソース ↓]</span>
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample②-リスト記号-まる(circle)&lt;/h3&gt;
+&lt;ul <span class="red">id=&quot;sample-circle&quot;</span>&gt;
+&lt;li&gt;オレガノ&lt;/li&gt;
+&lt;li&gt;カモミール &lt;/li&gt;
+&lt;li&gt;クレソン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample③-リスト記号-四角(square)&lt;/h3&gt;
+&lt;ul <span class="red">id=&quot;sample-square&quot;</span>&gt;
+&lt;li&gt;オレガノ&lt;/li&gt;
+&lt;li&gt;カモミール &lt;/li&gt;
+&lt;li&gt;クレソン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/aside&gt;
+
+&lt;aside&gt;
+&lt;section&gt;
+&lt;h3&gt;Sample④-リスト記号-なし(none)&lt;/h3&gt;
+&lt;ul <span class="red">id=&quot;sample-none&quot;</span>&gt;
+&lt;li&gt;オレガノ&lt;/li&gt;
+&lt;li&gt;カモミール &lt;/li&gt;
+&lt;li&gt;クレソン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/aside&gt;</pre>
+
+<span><a href="css/sample15_1.css">このページのCSSソースを見る</a></span>
+
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML</a> All Rights Reserved.
+</footer>
+</body>
+</html>

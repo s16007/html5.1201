@@ -1,0 +1,69 @@
+/* 2xy.css */
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#666;
+	font-family:Century Gothic, Arial, sans-serif;
+	line-height: 18px;
+/*背景の指定*/
+	background:#3cc;
+	/*webkit系ベンダープレフィックス（参考のため一応残しています）*/
+	background: -webkit-linear-gradient(left top, #FCC, #CF6 20%, #3CC 40%, #006 70%);
+	/*標準型*/
+	background: linear-gradient(to bottom right, #FCC, #CF6 20%, #3CC 40%, #006 70%);
+}
+header {
+	width: 660px;
+	margin: 0px auto;
+	padding: 30px;
+	color: #000;
+}
+h1 {
+	line-height: 1em;
+	font-size: 200%;
+}
+#container {
+	width: 600px;
+	margin: 0px auto;
+	padding: 30px;
+	background: #FFF;
+	border: 1px solid #9c0;
+}
+header, article, footer, aside, time ,nav { display: block; }
+pre {
+	font-size: 82%;
+	color: #93BAF5;
+	margin-bottom: 2em;
+	width: 400px;
+}
+footer {
+	width: 660px;
+	margin: 0px auto;
+	color: #FFF;
+	text-align: center;
+	padding: 10px 0px;
+	background: #000;
+	border: 1px solid #000;
+	font: bold 80%/1em Arial, Helvetica, sans-serif;
+}
+
+/* color */
+.red{
+	color: #F99;
+}
+.green{
+	color: #6C9;
+}
+/* font size */
+span {
+	font-size: 80%;
+}
+/* link */
+a {
+	color: #F90;
+	text-decoration: underline;
+}
+a:hover {
+	color: #F00;
+}

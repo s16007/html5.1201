@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ほんっとにはじめてのHTML_Sample 16-5</title>
+<meta name="description" content="ほんっとにはじめてのHTML">
+<meta name="keywords" content="ほんっとにはじめてのHTML,CSS3,html5">
+<link rel="stylesheet" type="text/css" href="css/sample16-5.css" media="screen, tv, projection">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+<h1>ほんっとにはじめてのHTML_Sample16-5</h1>
+<h2>横列をグループ化しよう</h2>
+</header>
+
+<div id="container">
+<p class="green" style="margin-top:0em;">
+●横列をグループ化して、CSSで色分けしましょう。
+</p>
+
+<p>
+thead, tfoot, tbody, にグループ化して色分けしてみました。
+</p>
+
+<table class="sample1">
+<caption>来店者数</caption>
+<thead>
+  <tr>
+    <th>エリア</th>
+    <th>店舗名</th>
+    <th>来店総数</th>
+    <th>新規来店</th>
+    <th>リピート</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th rowspan="3">A</td>
+    <td>渋谷店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>神宮前店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>青山店</td>
+    <td>200</td>
+    <td>120</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <th rowspan="2">B</td>
+    <td>三軒茶屋店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>二子玉川店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <th colspan="2">合計</td>
+    <td>700</td>
+    <td>480</td>
+    <td>220</td>
+  </tr>
+</tfoot>
+</table>
+
+
+
+
+
+
+<p class="green" style="border-top:solid 1px #6C9; margin-top:50px; padding-top:30px;" id="twobody">
+●tbody は1つのテーブルの中に複数入れる事が出来ます。
+</p>
+<p>
+このサンプルは、tbodyを2つ入れて色分けしてみました。
+</p>
+
+<table class="sample2">
+<caption>来店者数</caption>
+<thead>
+  <tr>
+    <th>エリア</th>
+    <th>店舗名</th>
+    <th>来店総数</th>
+    <th>新規来店</th>
+    <th>リピート</th>
+  </tr>
+</thead>
+<tfoot>
+  <tr>
+    <th colspan="2">合計</td>
+    <td>1150</td>
+    <td>780</td>
+    <td>370</td>
+  </tr>
+</tfoot>
+<tbody>
+  <tr>
+    <th rowspan="3">A</td>
+    <td>渋谷店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>神宮前店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>青山店</td>
+    <td>200</td>
+    <td>120</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <th rowspan="2">B</td>
+    <td>三軒茶屋店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>二子玉川店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+</tbody>
+<tbody class="pink">
+  <tr>
+    <th rowspan="3">C
+    <td>銀座店</td>
+    <td>200</td>
+    <td>120</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>日本橋店</td>
+    <td>100</td>
+    <td>80</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>京橋店</td>
+    <td>150</td>
+    <td>100</td>
+    <td>50</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+<p>
+  <span><a href="css/sample16-5.css">このページのCSSソースを見る</a></span>
+</p>
+</div>
+<footer>Copyright © <a href="http://honttoni.blog74.fc2.com/">ほんっとにはじめてのHTML</a> All Rights Reserved.
+</footer>
+</body>
+</html>
